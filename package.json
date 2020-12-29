@@ -1,0 +1,33 @@
+{
+  "name": "wbs-primer",
+  "version": "1.0.0",
+  "description": "First project for the WBS Coding School BootCamp",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack serve --config webpack.dev.js",
+    "build": "webpack --config webpack.prod.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Massimilianok/wbs-primer.git"
+  },
+  "author": "Massimiliano Rizzuto",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Massimilianok/wbs-primer/issues"
+  },
+  "homepage": "https://github.com/Massimilianok/wbs-primer#readme",
+  "devDependencies": {
+    "autoprefixer": "^10.1.0",
+    "clean-webpack-plugin": "^3.0.0",
+    "css-loader": "^5.0.1",
+    "html-webpack-plugin": "^4.5.0",
+    "postcss": "^8.2.1",
+    "postcss-loader": "^4.1.0",
+    "style-loader": "^2.0.0",
+    "webpack": "^5.11.1",
+    "webpack-cli": "^4.3.0",
+    "webpack-dev-server": "^3.11.0"
+  }
+}
