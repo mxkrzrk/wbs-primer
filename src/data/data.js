@@ -3,7 +3,7 @@ export const blogArticle = [
     mission: 'WAC Corporal',
     year: '1946',
     description:
-      'It was the first (US designed) rocket that reached the edge of space.',
+      'It was the first rocket that reached the edge of space.',
     links: {
       wiki: 'https://en.wikipedia.org/wiki/WAC_Corporal',
       image:

@@ -1,0 +1,81 @@
+.nav-mobile {
+  background-color: var(--moon);
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  display: none;
+  animation-name: openNav;
+  animation-duration: 3s;
+}
+
+.nav-mobile-icon {
+  width: 100%;
+  height: 4rem;
+  background-color: rgba(242, 237, 208, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -4rem;
+}
+
+.nav-mobile-icon > div {
+  background-image: url('../images/space-shuttle.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  height: 2.5rem;
+  width: 2.5rem;
+  transform: rotate(-90deg);
+}
+
+.nav-mobile-button {
+  background-image: url('../images/power-off.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  background-color: var(--red);
+  height: 1.5rem;
+  width: 1.5rem;
+  margin: 2rem 1rem;
+  border-radius: 50%;
+  border: 10px solid var(--red);
+}
+
+.nav-mobile > ul > li {
+  list-style: none;
+  margin: 1rem 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  padding-right: 1rem;
+  font-size: 1.5rem;
+}
+
+.nav-mobile > ul > li > a {
+  flex-grow: 1;
+  text-decoration: none;
+  color: var(--white);
+}
+
+.nav-mobile > ul > li > span {
+  background-color: var(--red);
+  border-radius: 20px;
+  height: 1rem;
+  width: 3rem;
+  text-align: center;
+  color: var(--white);
+  font-size: 0.8rem;
+}
+
+@keyframes openNav {
+  from {
+    height: 0;
+  }
+
+  to {
+    height: 100%;
+  }
+}

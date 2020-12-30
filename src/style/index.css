@@ -4,17 +4,21 @@
   --white: #f2edd0;
   --dark: #0d0d0d;
   --red: #75092d;
+  --moon: #59554c;
+  --blue: #202d3f;
 }
 
 body {
   font-family: 'Space Grotesk', sans-serif;
   font-size: 12px;
-  background-image: url('../images/space-bg.jpg');
+  background-image: url('../images/space-bg-dark.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
   margin: 0;
+  text-rendering: optimizeLegibility;
+  position: relative;
 }
 
 .container {

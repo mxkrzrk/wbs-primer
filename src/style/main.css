@@ -3,7 +3,7 @@
 }
 
 .section {
-  background-color: var(--dark);
+  background-color: var(--blue);
   border-radius: 10px;
   box-shadow: 4px 2px 8px 2px rgba(89, 85, 76, 0.5);
   margin: 1rem 0;
@@ -22,7 +22,7 @@
   width: 8rem;
   height: 100%;
   border-radius: 10px 0 0 10px;
-  border: 2px solid var(--red);
+  /* border: 2px solid var(--red); */
   box-sizing: border-box;
 }
 
@@ -39,7 +39,7 @@
 }
 
 .section-article-text > p {
-  font-size: 0.6rem;
+  font-size: 0.7rem;
   margin: 0.5rem 0 0 0;
 }
 
@@ -73,7 +73,7 @@
   width: 1.5rem;
   height: 1.5rem;
   border-radius: 50%;
-  border: 1px solid #8c8372;
-  background-color: #8c8372;
+  border: 1px solid #bfb299;
+  background-color: #bfb299;
   box-sizing: border-box;
 }

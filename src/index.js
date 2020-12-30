@@ -1,36 +1,15 @@
 import './style/index.css';
 import './style/header.css';
+import './style/nav.css';
 import './style/main.css';
 import './style/footer.css';
 import { blogArticle } from './data/data';
+import {
+  createSection,
+  handleOpenMobileNav,
+} from './functions.js';
 
-function createSection(mission, year, description, wiki, image) {
-  const section = document.createElement('section');
-  section.classList.add('section');
-  section.innerHTML = `
-  <article class="section-article">
-    <div class="section-article-image-box">
-      <img
-        src="${image}"
-        alt="image"
-        class="section-article-image"
-      />
-    </div>
-    <div class="section-article-text">
-      <div class="section-article-text-info">
-        <h2>${mission}</h2>
-        <span>${year}</span>
-        <a href="${wiki}" target="_blank"></a>
-      </div>
-      <p>
-      ${description}
-      </p>
-    </div>
-  </article>
-`;
-  return section;
-}
-
+// Create list of articles
 const main = document.getElementById('main');
 blogArticle.map((el) => {
   const article = createSection(
@@ -42,3 +21,7 @@ blogArticle.map((el) => {
   );
   return main.appendChild(article);
 });
+
+// Add open event listener for mobile nav
+const navMobileBtnOpen = document.getElementById('nav-button-open');
+navMobileBtnOpen.addEventListener('click', handleOpenMobileNav);
