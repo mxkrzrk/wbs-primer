@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;700&display=swap');
+
+:root {
+  --white: #f2edd0;
+  --dark: #0d0d0d;
+  --red: #75092d;
+}
+
+body {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 16px;
+  background-image: url('../images/space-bg.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  margin: 0;
+}
+
+.container {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 6rem 1fr 2rem;
+  grid-template-areas:
+    'header'
+    'main'
+    'footer';
+}
+
+.main {
+}
