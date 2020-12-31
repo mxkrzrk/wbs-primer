@@ -1,13 +1,14 @@
 import './style/index.css';
 import './style/header.css';
-import './style/nav.css';
+import './style/nav-mobile.css';
+import './style/aside.css';
 import './style/main.css';
 import './style/footer.css';
 import { blogArticle } from './data/data';
-import {
-  createSection,
-  handleOpenMobileNav,
-} from './functions.js';
+import { createSection, handleOpenMobileNav, createNav } from './functions.js';
+
+// Create Nav for the desktop view
+createNav();
 
 // Create list of articles
 const main = document.getElementById('main');

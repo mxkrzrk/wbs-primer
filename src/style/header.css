@@ -4,6 +4,7 @@
   flex-direction: row;
   align-items: center;
   padding: 0 1rem;
+  grid-area: header;
 }
 
 .header-nav-button {
@@ -21,8 +22,14 @@
 
 .header-title {
   margin: 0;
-  font-size: 1.5rem;
   color: var(--white);
   text-align: center;
   flex-grow: 1;
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .header-nav-button {
+    display: none;
+  }
 }
