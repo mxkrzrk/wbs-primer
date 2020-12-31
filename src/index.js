@@ -14,6 +14,7 @@ createNav();
 const main = document.getElementById('main');
 blogArticle.map((el) => {
   const article = createSection(
+    el.id,
     el.mission,
     el.year,
     el.description,

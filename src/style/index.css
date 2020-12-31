@@ -20,19 +20,6 @@ body {
   text-rendering: optimizeLegibility;
 }
 
-body::-webkit-scrollbar {
-  width: 1em;
-}
-
-body::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-  background-color: var(--dark);
-}
-
-body::-webkit-scrollbar-thumb {
-  background-color: var(--red);
-}
-
 .container {
   position: relative;
   height: 100%;
@@ -51,7 +38,12 @@ body::-webkit-scrollbar-thumb {
     font-size: 18px;
   }
 
+  body::-webkit-scrollbar {
+    width: 0;
+  }
+
   .container {
+    height: 100vh;
     display: grid;
     grid-template-columns: 1fr 3fr;
     grid-template-rows: 6rem 1fr 2rem;

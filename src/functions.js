@@ -1,9 +1,9 @@
 import { blogArticle } from './data/data';
 
-function createSection(mission, year, description, wiki, image) {
+function createSection(id, mission, year, description, wiki, image) {
   const section = document.createElement('section');
   section.classList.add('section');
-  section.setAttribute('id', mission);
+  section.setAttribute('id', id);
   section.innerHTML = `
   <article class="section-article">
     <div class="section-article-image-box">
@@ -31,9 +31,11 @@ function createSection(mission, year, description, wiki, image) {
 function handleOpenMobileNav() {
   // Create array with info for nav menu
   const titleArticles = blogArticle.map((el) => {
-    const navLinks = { m: el.mission, y: el.year };
+    const navLinks = { id: el.id, m: el.mission, y: el.year };
     return navLinks;
   });
+  // Block scroll of body
+  document.querySelector('body').style.overflow = 'hidden';
   // Create nav
   const nav = document.getElementById('nav-mobile');
   nav.innerHTML = `
@@ -44,39 +46,60 @@ function handleOpenMobileNav() {
   const ul = document.createElement('ul');
   titleArticles.map((el) => {
     const li = document.createElement('li');
-    li.innerHTML = `
-      <a href="#">${el.m}</a><span>${el.y}</span>
-    `;
+    const a = document.createElement('a');
+    a.innerText = el.m;
+    a.setAttribute('href', '#');
+    a.setAttribute('data-id', el.id);
+    const span = document.createElement('span');
+    span.innerText = el.y;
+    // Add scroll event for nav link
+    a.addEventListener('click', scrollToSection);
+    // Append link
+    li.appendChild(a);
+    li.appendChild(span);
     return ul.appendChild(li);
   });
+  // Append list of links
   nav.appendChild(ul);
   // Add close event listener for mobile nav
   const navMobileBtnClose = document.getElementById('nav-button-close');
   navMobileBtnClose.addEventListener('click', handleCloseMobileNav);
-  // Add scroll event for nav links
-  ul.addEventListener('click', scrollToSection);
 }
 
 function handleCloseMobileNav() {
   const nav = document.getElementById('nav-mobile');
   nav.style.display = 'none';
   nav.innerHTML = '';
+  // Add scroll of body
+  document.querySelector('body').style.overflow = 'none';
 }
 
 function scrollToSection(e) {
-  const target = document.getElementById(e.target.innerText);
-  handleCloseMobileNav();
-  window.scrollBy({
-    top: target.offsetTop,
-    left: target.offsetLeft,
-    behavior: 'smooth',
-  });
+  const target = document.getElementById(e.target.dataset.id);
+  // Check the viewport
+  if (window.innerWidth >= 992) {
+    const main = document.getElementById('main');
+    main.scrollTo({
+      top: target.offsetTop - 100,
+      left: target.offsetLeft,
+      behavior: 'smooth',
+    });
+  } else {
+    handleCloseMobileNav();
+    window.scrollTo({
+      top: target.offsetTop,
+      left: target.offsetLeft,
+      behavior: 'smooth',
+    });
+    // Add scroll of body
+    document.querySelector('body').style.overflow = 'scroll';
+  }
 }
 
 function createNav() {
   // Create array with info for nav menu
   const titleArticles = blogArticle.map((el) => {
-    const navLinks = { m: el.mission, y: el.year };
+    const navLinks = { id: el.id, m: el.mission, y: el.year };
     return navLinks;
   });
   // Create list of links
@@ -84,14 +107,20 @@ function createNav() {
   const ul = document.createElement('ul');
   titleArticles.map((el) => {
     const li = document.createElement('li');
-    li.innerHTML = `
-      <a href="#">${el.m}</a><span>${el.y}</span>
-    `;
+    const a = document.createElement('a');
+    a.innerText = el.m;
+    a.setAttribute('href', '#');
+    a.setAttribute('data-id', el.id);
+    const span = document.createElement('span');
+    span.innerText = el.y;
+    // Add scroll event for nav link
+    a.addEventListener('click', scrollToSection);
+    // Append link
+    li.appendChild(a);
+    li.appendChild(span);
     return ul.appendChild(li);
   });
   nav.appendChild(ul);
-  // Add scroll event for nav links
-  ul.addEventListener('click', scrollToSection);
 }
 
 export { createSection, handleOpenMobileNav, handleCloseMobileNav, createNav };
