@@ -1,6 +1,6 @@
 .nav-mobile {
   background-color: var(--blue);
-  position: absolute;
+  position: fixed;
   left: 0;
   bottom: 0;
   overflow-y: scroll;
@@ -35,6 +35,10 @@
 }
 
 .nav-mobile-button {
+  padding: 1rem;
+}
+
+.nav-mobile-button > div {
   background-image: url('../images/power-off.svg');
   background-repeat: no-repeat;
   background-position: center;
@@ -42,7 +46,6 @@
   background-color: var(--red);
   height: 1.5rem;
   width: 1.5rem;
-  margin: 2rem 1rem;
   border-radius: 50%;
   border: 10px solid var(--red);
 }

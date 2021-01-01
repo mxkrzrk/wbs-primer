@@ -28,22 +28,15 @@ function createSection(id, mission, year, description, wiki, image) {
   return section;
 }
 
-function handleOpenMobileNav() {
-  // Create array with info for nav menu
+function createNav() {
+  // Create array with infos for nav menu
   const titleArticles = blogArticle.map((el) => {
     const navLinks = { id: el.id, m: el.mission, y: el.year };
     return navLinks;
   });
-  // Block scroll of body
-  document.querySelector('body').style.overflow = 'hidden';
-  // Create nav
-  const nav = document.getElementById('nav-mobile');
-  nav.innerHTML = `
-  <div class="nav-mobile-icon"><div></div></div>
-  <div class="nav-mobile-button" id="nav-button-close"></div>`;
-  nav.style.display = 'block';
   // Create list of links
-  const ul = document.createElement('ul');
+  const nav = document.getElementById('nav');
+  const ul = document.getElementById('nav-desktop-links');
   titleArticles.map((el) => {
     const li = document.createElement('li');
     const a = document.createElement('a');
@@ -59,19 +52,49 @@ function handleOpenMobileNav() {
     li.appendChild(span);
     return ul.appendChild(li);
   });
-  // Append list of links
-  nav.appendChild(ul);
+}
+
+function handleOpenMobileNav() {
+  // Hidden container
+  document.querySelector('.container').style.setProperty('display', 'none');
+  // Create array with info for nav menu
+  const titleArticles = blogArticle.map((el) => {
+    const navLinks = { id: el.id, m: el.mission, y: el.year };
+    return navLinks;
+  });
+  // Create nav
+  const nav = document.getElementById('nav-mobile');
+  nav.style.display = 'block';
+  // Create list of nav links
+  const ul = document.getElementById('nav-mobile-links');
+  titleArticles.map((el) => {
+    const li = document.createElement('li');
+    const a = document.createElement('a');
+    a.innerText = el.m;
+    a.setAttribute('href', '#');
+    a.setAttribute('data-id', el.id);
+    const span = document.createElement('span');
+    span.innerText = el.y;
+    // Add scroll event for nav link
+    a.addEventListener('click', scrollToSection);
+    // Append link
+    li.appendChild(a);
+    li.appendChild(span);
+    return ul.appendChild(li);
+  });
   // Add close event listener for mobile nav
   const navMobileBtnClose = document.getElementById('nav-button-close');
   navMobileBtnClose.addEventListener('click', handleCloseMobileNav);
 }
 
 function handleCloseMobileNav() {
+  // Turn on the container
+  document.querySelector('.container').style.removeProperty('display', 'none');
   const nav = document.getElementById('nav-mobile');
   nav.style.display = 'none';
-  nav.innerHTML = '';
-  // Add scroll of body
-  document.querySelector('body').style.overflow = 'none';
+  const ul = document.getElementById('nav-mobile-links');
+  // Remove list of nav links
+  ul.innerHTML = '';
 }
 
 function scrollToSection(e) {
@@ -91,36 +114,7 @@ function scrollToSection(e) {
       left: target.offsetLeft,
       behavior: 'smooth',
     });
-    // Add scroll of body
-    document.querySelector('body').style.overflow = 'scroll';
   }
-}
-
-function createNav() {
-  // Create array with info for nav menu
-  const titleArticles = blogArticle.map((el) => {
-    const navLinks = { id: el.id, m: el.mission, y: el.year };
-    return navLinks;
-  });
-  // Create list of links
-  const nav = document.getElementById('nav');
-  const ul = document.createElement('ul');
-  titleArticles.map((el) => {
-    const li = document.createElement('li');
-    const a = document.createElement('a');
-    a.innerText = el.m;
-    a.setAttribute('href', '#');
-    a.setAttribute('data-id', el.id);
-    const span = document.createElement('span');
-    span.innerText = el.y;
-    // Add scroll event for nav link
-    a.addEventListener('click', scrollToSection);
-    // Append link
-    li.appendChild(a);
-    li.appendChild(span);
-    return ul.appendChild(li);
-  });
-  nav.appendChild(ul);
 }
 
 export { createSection, handleOpenMobileNav, handleCloseMobileNav, createNav };

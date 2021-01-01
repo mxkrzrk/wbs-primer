@@ -8,7 +8,9 @@ import { blogArticle } from './data/data';
 import { createSection, handleOpenMobileNav, createNav } from './functions.js';
 
 // Create Nav for the desktop view
-createNav();
+if (window.innerWidth >= 992) {
+  createNav();
+}
 
 // Create list of articles
 const main = document.getElementById('main');

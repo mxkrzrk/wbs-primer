@@ -15,20 +15,27 @@
     <title>Space Missions</title>
   </head>
   <body>
-    <!-- Mobile nav -->
-    <nav class="nav-mobile" id="nav-mobile"></nav>
     <div class="container">
       <header class="header">
-        <span class="header-nav-button" id="nav-button-open"></span>
         <h1 class="header-title">Space Missions</h1>
       </header>
-      <aside class="aside"><nav class="nav" id="nav"></nav></aside>
+      <aside class="aside">
+        <!-- Desktop nav -->
+        <nav class="nav" id="nav"><ul id="nav-desktop-links"></ul></nav>
+      </aside>
       <main class="main" id="main"></main>
       <footer class="footer">
-        <p class="footer-info">
+        <div class="footer-nav-button" id="nav-button-open"></div>
+        <div class="footer-info">
           <small>Powered by Massimiliano Rizzuto</small>
-        </p>
+        </div>
       </footer>
     </div>
+    <!-- Mobile nav -->
+    <nav class="nav-mobile" id="nav-mobile">
+      <div class="nav-mobile-icon"><div></div></div>
+      <div class="nav-mobile-button" id="nav-button-close"><div></div></div>
+      <ul id="nav-mobile-links"></ul>
+    </nav>
   </body>
 </html>

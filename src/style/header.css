@@ -7,29 +7,9 @@
   grid-area: header;
 }
 
-.header-nav-button {
-  background-image: url('../images/power-on.svg');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-  background-color: var(--blue);
-  height: 1.5rem;
-  width: 1.5rem;
-  box-shadow: 2px 2px 10px 5px rgba(89, 85, 76, 0.5);
-  border-radius: 50%;
-  border: 10px solid var(--blue);
-}
-
 .header-title {
   margin: 0;
   color: var(--white);
   text-align: center;
   flex-grow: 1;
-}
-
-/* Large devices (desktops, 992px and up) */
-@media (min-width: 992px) {
-  .header-nav-button {
-    display: none;
-  }
 }
