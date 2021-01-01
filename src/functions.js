@@ -55,16 +55,13 @@ function createNav() {
 }
 
 function handleOpenMobileNav() {
-  // Hidden container
-  document.querySelector('.container').style.setProperty('display', 'none');
   // Create array with info for nav menu
   const titleArticles = blogArticle.map((el) => {
     const navLinks = { id: el.id, m: el.mission, y: el.year };
     return navLinks;
   });
-  // Create nav
-  const nav = document.getElementById('nav-mobile');
-  nav.style.display = 'block';
+  // Hidden container
+  document.querySelector('.container').style.setProperty('display', 'none');
   // Create list of nav links
   const ul = document.getElementById('nav-mobile-links');
   titleArticles.map((el) => {
@@ -85,6 +82,11 @@ function handleOpenMobileNav() {
   // Add close event listener for mobile nav
   const navMobileBtnClose = document.getElementById('nav-button-close');
   navMobileBtnClose.addEventListener('click', handleCloseMobileNav);
+  // Turn on nav
+  const nav = document.getElementById('nav-mobile');
+  nav.style.display = 'block';
+  // Adjust position
+  nav.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
 }
 
 function handleCloseMobileNav() {

@@ -10,6 +10,7 @@
     grid-area: aside;
     display: block;
     overflow-y: scroll;
+    background-color: var(--blue);
   }
 
   .aside::-webkit-scrollbar {
@@ -26,7 +27,6 @@
   }
 
   .nav {
-    background-color: var(--blue);
     width: 100%;
     padding: 2rem 0;
   }
