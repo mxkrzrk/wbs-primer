@@ -72,7 +72,7 @@ export const blogArticle = [
     id: uuidv4(),
     mission: 'Explorer 6',
     year: '1959',
-    description: 'First photograph of Earth taken from the orbit (by NASA).',
+    description: 'First photograph of Earth taken from the orbit.',
     links: {
       wiki: 'https://en.wikipedia.org/wiki/Explorer_6',
       image:
@@ -94,11 +94,10 @@ export const blogArticle = [
     id: uuidv4(),
     mission: 'OSO-1',
     year: '1962',
-    description: 'First orbital solar observatory (by NASA).',
+    description: 'First orbital solar observatory.',
     links: {
       wiki: 'https://en.wikipedia.org/wiki/Orbiting_Solar_Observatory',
-      image:
-        'https://upload.wikimedia.org/wikipedia/commons/4/45/OSO4.gif',
+      image: 'https://upload.wikimedia.org/wikipedia/commons/4/45/OSO4.gif',
     },
   },
   {
@@ -127,7 +126,7 @@ export const blogArticle = [
     id: uuidv4(),
     mission: 'Apollo 8',
     year: '1968',
-    description: 'First piloted orbital mission of Moon (by NASA).',
+    description: 'First piloted orbital mission of Moon.',
     links: {
       wiki: 'https://en.wikipedia.org/wiki/Apollo_8',
       image:
@@ -138,7 +137,8 @@ export const blogArticle = [
     id: uuidv4(),
     mission: 'Apollo 11',
     year: '1969',
-    description: 'First human on the Moon and first space launch from a celestial body (by NASA)',
+    description:
+      'First human on the Moon and first space launch from a celestial body.',
     links: {
       wiki: 'https://en.wikipedia.org/wiki/Apollo_11',
       image:
@@ -152,8 +152,7 @@ export const blogArticle = [
     description: 'First automatic sample return from the Moon.',
     links: {
       wiki: 'https://en.wikipedia.org/wiki/Luna_16',
-      image:
-        'https://upload.wikimedia.org/wikipedia/commons/b/bb/Luna_16.jpg',
+      image: 'https://upload.wikimedia.org/wikipedia/commons/b/bb/Luna_16.jpg',
     },
   },
   {
@@ -163,19 +162,98 @@ export const blogArticle = [
     description: 'First space station.',
     links: {
       wiki: 'https://en.wikipedia.org/wiki/Salyut_1',
-      image:
-        'https://upload.wikimedia.org/wikipedia/en/c/cc/Salyut_1.jpg',
+      image: 'https://upload.wikimedia.org/wikipedia/en/c/cc/Salyut_1.jpg',
     },
   },
   {
     id: uuidv4(),
     mission: 'Pioneer 10',
     year: '1972',
-    description: 'First human made object that had been sent on escape trajectory away from the Sun.',
+    description:
+      'First human made object that had been sent on escape trajectory away from the Sun.',
     links: {
       wiki: 'https://en.wikipedia.org/wiki/Pioneer_10',
       image:
         'https://upload.wikimedia.org/wikipedia/commons/f/f0/An_artist%27s_impression_of_a_Pioneer_spacecraft_on_its_way_to_interstellar_space.jpg',
+    },
+  },
+  {
+    id: uuidv4(),
+    mission: 'Mariner 10',
+    year: '1974',
+    description: 'First photograph of Venus from Space.',
+    links: {
+      wiki: 'https://en.wikipedia.org/wiki/Mariner_10',
+      image:
+        'https://upload.wikimedia.org/wikipedia/commons/6/60/Mariner10.gif',
+    },
+  },
+  {
+    id: uuidv4(),
+    mission: 'Venera 13',
+    year: '1982',
+    description:
+      'First Venus soil samples and sound recording of another world.',
+    links: {
+      wiki: 'https://en.wikipedia.org/wiki/Venera_13',
+      image:
+        'https://heasarc.gsfc.nasa.gov/Images/misc_missions/venera13_small.gif',
+    },
+  },
+  {
+    id: uuidv4(),
+    mission: 'STS-41-B',
+    year: '1984',
+    description: 'First untethered spacewalk, Bruce McCandless II.',
+    links: {
+      wiki: 'https://en.wikipedia.org/wiki/STS-41-B',
+      image:
+        'https://upload.wikimedia.org/wikipedia/commons/9/91/Bruce_McCandless_II_during_EVA_in_1984.jpg',
+    },
+  },
+  {
+    id: uuidv4(),
+    mission: 'Voyager 1',
+    year: '1990',
+    description: 'First photograph of the whole Solar System.',
+    links: {
+      wiki: 'https://en.wikipedia.org/wiki/Voyager_1',
+      image:
+        'https://upload.wikimedia.org/wikipedia/commons/6/60/Voyager_spacecraft_model.png',
+    },
+  },
+  {
+    id: uuidv4(),
+    mission: 'Mir',
+    year: '1995',
+    description:
+      'First Record longest duration spaceflight set by Valeri Polyakov.',
+    links: {
+      wiki: 'https://en.wikipedia.org/wiki/Mir',
+      image:
+        'https://upload.wikimedia.org/wikipedia/commons/0/09/Mir_Space_Station_viewed_from_Endeavour_during_STS-89.jpg',
+    },
+  },
+  {
+    id: uuidv4(),
+    mission: 'HALCA',
+    year: '1997',
+    description: 'First orbital radio observatory.',
+    links: {
+      wiki: 'https://en.wikipedia.org/wiki/HALCA',
+      image:
+        'https://upload.wikimedia.org/wikipedia/commons/6/67/Haruka_HALCA_VSOP_MUSES-B.jpg',
+    },
+  },
+  {
+    id: uuidv4(),
+    mission: 'NEAR Shoemaker',
+    year: '2000',
+    description: 'First orbiting of an asteroid (433 Eros).',
+    links: {
+      wiki: 'https://en.wikipedia.org/wiki/NEAR_Shoemaker',
+      image:
+        'https://upload.wikimedia.org/wikipedia/commons/c/cb/NEAR_Shoemaker_spacecraft_model.png',
     },
   },
 ];

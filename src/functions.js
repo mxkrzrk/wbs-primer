@@ -15,7 +15,7 @@ function createSection(id, mission, year, description, wiki, image) {
     </div>
     <div class="section-article-text">
       <div class="section-article-text-info">
-        <h2>${mission}</h2>
+        <h3>${mission}</h3>
         <span>${year}</span>
         <a href="${wiki}" target="_blank"></a>
       </div>

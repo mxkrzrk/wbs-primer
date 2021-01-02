@@ -26,6 +26,7 @@
   height: 100%;
   border-radius: 10px 0 0 10px;
   box-sizing: border-box;
+  background-color: var(--dark);
 }
 
 .section-article-image {
@@ -52,7 +53,7 @@
   padding-top: 0.5rem;
 }
 
-.section-article-text-info > h2 {
+.section-article-text-info > h3 {
   margin: 0;
   flex-grow: 1;
 }
@@ -78,18 +79,23 @@
   box-sizing: border-box;
 }
 
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+  .main {
+    padding: 0 6rem;
+  }
+}
+
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
   .main {
-    padding: 0 8rem;
-    margin-bottom: 4rem;
+    padding: 0 10rem;
   }
 }
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
   .main {
-    padding: 0 4rem;
     margin-bottom: 0;
   }
 
@@ -144,6 +150,6 @@
 /* X-Large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
   .main {
-    padding: 0 8rem;
+    padding: 0 14rem;
   }
 }

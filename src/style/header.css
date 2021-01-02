@@ -1,15 +1,18 @@
 .header {
   display: flex;
-  justify-content: stretch;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
+  justify-content: center;
+  text-align: center;
   padding: 0 1rem;
   grid-area: header;
+  color: var(--white);
+}
+
+.header > * {
+  margin: 0;
 }
 
 .header-title {
-  margin: 0;
-  color: var(--white);
-  text-align: center;
-  flex-grow: 1;
+  color: var(--red);
 }
