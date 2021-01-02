@@ -19,6 +19,16 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /\.m?js$/,
+        exclude: /node_modules/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: ['@babel/preset-env'],
+          },
+        },
+      },
+      {
         test: /\.css$/i,
         use: [
           'style-loader',
@@ -38,7 +48,7 @@ module.exports = {
         type: 'asset/resource',
         generator: {
           filename: 'images/[hash][ext]',
-        }
+        },
       },
     ],
   },
