@@ -12,6 +12,17 @@
   width: 100%;
 }
 
+.footer a:any-link {
+  color: var(--white);
+  transition: color 0.3s;
+  text-decoration: none;
+}
+
+.footer a:hover,
+.footer a:active {
+  color: var(--red);
+}
+
 .footer-nav-button {
   background-image: url('../images/power-on.svg');
   background-repeat: no-repeat;
@@ -34,6 +45,15 @@
   text-align: center;
 }
 
+.footer-info-icon {
+  background-image: url('../images/github-brands.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  padding: 0.3rem;
+  margin-left: 0.5rem;
+}
+
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
   .footer {
@@ -42,6 +62,10 @@
 
   .footer-info {
     background-color: var(--blue);
+  }
+
+  .footer-info-icon {
+    padding: 0.6rem;
   }
 
   .footer-nav-button {
