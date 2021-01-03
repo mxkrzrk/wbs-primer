@@ -97,6 +97,9 @@
 @media (min-width: 992px) {
   .main {
     margin-bottom: 0;
+    /* Scrollbar for Firefox */
+    scrollbar-color: var(--red) var(--dark);
+    scrollbar-width: thin;
   }
 
   .main::-webkit-scrollbar {

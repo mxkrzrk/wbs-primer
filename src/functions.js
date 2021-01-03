@@ -35,7 +35,6 @@ function createNav() {
     return navLinks;
   });
   // Create list of links
-  const nav = document.getElementById('nav');
   const ul = document.getElementById('nav-desktop-links');
   titleArticles.map((el) => {
     const li = document.createElement('li');
@@ -92,10 +91,11 @@ function handleOpenMobileNav() {
 function handleCloseMobileNav() {
   // Turn on the container
   document.querySelector('.container').style.removeProperty('display', 'none');
+  // Turn off mobile nav
   const nav = document.getElementById('nav-mobile');
   nav.style.display = 'none';
-  const ul = document.getElementById('nav-mobile-links');
   // Remove list of nav links
+  const ul = document.getElementById('nav-mobile-links');
   ul.innerHTML = '';
 }
 
